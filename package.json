@@ -1,0 +1,15 @@
+{
+  "name": "twilio-sms-app",
+  "version": "1.0.0",
+  "description": "A Twilio sms API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Eniola Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "twilio": "^3.66.1"
+  }
+}
