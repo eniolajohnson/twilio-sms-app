@@ -5,10 +5,13 @@
 // const authToken = process.env.TWILIO_AUTH_TOKEN;
 // const client = require('twilio')(accountSid, authToken);
 
+// const body = 'This is the ship that made the Kessel Run in fourteen parsecs?';
+
 // client.messages
 //   .create({
-//      body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+//      body: body,
 //      from: '+15017122661',
 //      to: '+15558675310'
 //    })
 //   .then(message => console.log(message.sid));
+// console.log(process.env)
