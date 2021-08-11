@@ -1,17 +1,24 @@
-// Download the helper library from https://www.twilio.com/docs/node/install
-// Find your Account SID and Auth Token at twilio.com/console
-// and set the environment variables. See http://twil.io/secure
-// const accountSid = process.env.TWILIO_ACCOUNT_SID;
-// const authToken = process.env.TWILIO_AUTH_TOKEN;
-// const client = require('twilio')(accountSid, authToken);
+const express = require('express');
+const app = express();
+const dotenv = require('dotenv');
+dotenv.config();
 
-// const body = 'This is the ship that made the Kessel Run in fourteen parsecs?';
 
-// client.messages
-//   .create({
-//      body: body,
-//      from: '+15017122661',
-//      to: '+15558675310'
-//    })
-//   .then(message => console.log(message.sid));
-// console.log(process.env)
+app.get('/', function (req, res) {
+  const accountSid = process.env.TWILIO_ACCOUNT_SID;
+  const authToken = process.env.TWILIO_AUTH_TOKEN;
+  const client = require('twilio')(accountSid, authToken);
+
+  client.messages
+    .create({
+      body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+      from: '+15126437616',
+      to: '+2348061184750'
+    })
+    .then(message => res.status(status).send("success: ", message.sid));
+})
+ 
+app.listen(3000)
+
+// console.log('please work')
+
